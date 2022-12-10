@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Odin Sign-up Form</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="logo-box">
@@ -21,27 +22,30 @@
             <form class="form" action="" method="post">
                 <div class="fieldbox">
                     <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" placeholder="Dave">
+                    <input type="text" id="first_name" placeholder="Dave" required>
                 </div>
                 <div class="fieldbox">
                     <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" placeholder="Smith">
+                    <input type="text" id="last_name" placeholder="Smith" required>
                 </div>
                 <div class="fieldbox">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="davesmith@gmail.com">
+                    <input type="email" id="email" placeholder="davesmith@gmail.com" required>
                 </div>
                 <div class="fieldbox">
                     <label for="phone_number">Phone Number</label>
-                    <input type="text" id="phone_numer" placeholder="800-931-2211">
+                    <input type="text" id="phone_numer" placeholder="800-931-2211" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                 </div>
                 <div class="fieldbox">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Create password">
+                    <input class="error password" type="password" id="password" placeholder="Create password" required>
                 </div>
                 <div class="fieldbox">
                     <label for="confirm">Confirm Password</label>
-                    <input type="password" id="confirm" placeholder="Confirm your password">
+                    <input class="error" type="password" id="confirm" placeholder="Confirm your password" required novalidate/>
+                </div>
+                <div class="password-info-box">
+                    <span>* Passwords don't match</span>
                 </div>
             </form>
         </div>

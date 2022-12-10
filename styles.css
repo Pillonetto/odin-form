@@ -13,6 +13,11 @@ input,label {
     display: block;
 }
 
+a{
+    color:#596D48;
+    font-weight: bold;
+}
+
 .logo-box{
     background: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
     height: 30vh;
@@ -95,6 +100,21 @@ input[type="password"]{
     min-width: calc(100% - 12px);
 }
 
+input:focus{
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.135);
+}
+
+input[type="text"]:user-valid,
+input[type="password"].password:user-valid,
+input[type="password"].valid,
+input[type="email"]:user-valid {
+    border: 3px solid green;
+}   
+
+.error {
+    border: 3px solid rgb(203, 2, 2);
+}
+
 label{
     color: rgb(79, 79, 79);
     font-size: 1.2rem;
@@ -110,7 +130,28 @@ button[type="submit"]{
     color: white;
     background-color: #596D48;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.299);
-    border-style: none;
+    border: 1px solid #2f39279c
+}
+
+button:hover{
+    background-color: #4e5f40;
+    border: 1px solid #2f3927;
+}
+
+button:active{
+    background-color:#3e4b33;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.password-info-box {
+    margin: -2px;
+    margin-top: 8px;
+    padding: 0;
+    font-size: 0.9rem;
+    color: red;
 }
 
 @media only screen and (min-width: 900px) {
@@ -125,7 +166,7 @@ button[type="submit"]{
     }
 
     .logo-div{
-        margin-top: 20vh;
+        margin-top: 23vh;
         padding: 16px;
         position: sticky;
     }
@@ -152,7 +193,7 @@ button[type="submit"]{
     .action{
         font-size: 1.9rem;
         width: 80%;
-        margin-top: -16vh;
+        margin-top: -7vh;
     }
 
     .form-box{
